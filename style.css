@@ -4,15 +4,21 @@
     font-family: sans-serif;
     scroll-behavior: smooth;
 }
+h1{
+    font-size: 50px;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-decoration: underline;
+}
 .banner{
     width: 100%;
     height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.5)),url(1st_year/back.jpg);
     background-size: cover;
     background-position: center;
-}
-body{
-    margin: 12px;
 }
 .navbar{
     width: 95%;
@@ -59,10 +65,12 @@ body{
     transform: translate(-50);
     text-align: center;
     color: #fff;
+    
 }
 .content h1{
     font-size: 70px;
-    margin-top: 80px;   
+    margin-top: 80px;  
+    text-decoration: none; 
 }
 .content p{
     margin: 20px auto;
@@ -79,7 +87,7 @@ button{
     font-weight: bold;
     border: 2px solid #009688;
     background: transparent;
-    color: #fff;
+    color: white;
     cursor: pointer;
     position: relative;
     overflow: hidden;
@@ -101,14 +109,18 @@ button:hover::after span{
 
 }
 button:hover{
-    border: none;
+    z-index: 10;
+    transform: scale(1.15);
+    background-color: #009688;
+    transition: 1s; 
 }
 .banner1{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.234),rgba(0, 0, 0, 0.748)),url(1st_year/fy.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: center center;
+    background-attachment: fixed;
 }
 .banner2{
     width: 100%;
@@ -173,22 +185,6 @@ button:hover{
     background-size: cover;
     background-position: center;
 }
-#about h1{
-    height: 25px;
-    font-weight: bolder;
-    text-decoration: solid;
-    border-bottom: 2px solid;
-    padding: 15px;
-    margin: 10px;
-    width: 170px;
-}
-#about p{
-    line-height: 20px;
-}
-#about p2{
-    line-height: 20px;
-
-}
 #contact h1{
     height: 25px;
     font-weight: bolder;
@@ -204,7 +200,26 @@ button:hover{
     text-decoration: underline;
     text-decoration: underline;
 }
-body{
-    background-color: #7260608f;
-
+summary{
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    text-decoration: underline;
 }
+.name{
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 10px;
+    margin: 10px;
+}
+.back{
+background: radial-gradient(#f0f4fd, #a8caf9);
+align-items: center center;
+margin: 0%;
+padding: 0%;
+}
+
