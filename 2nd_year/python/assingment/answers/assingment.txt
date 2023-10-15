@@ -1,0 +1,174 @@
+                                                                                      ASSINGMENT - 1
+
+Q1) WAP TO SWAP TWO INTEGER 
+
+1.) WITHOUT USING THIRD VARAIBLE
+
+a = int(input("enter number 1: "))
+b = int(input("enter number 2: "))
+print("number before swsapping are ",a ,"and " , b)
+a,b = b,a
+print("number after swapping are ",a ,"and ",b)
+
+2.) WITH USING THIRD VARIABLE
+
+a = int(input("enter number 1: "))
+b = int(input("enter number 2: "))
+print("number before swsapping are ",a ,"and " , b)
+c = a
+a = b
+b = c
+print("number after swapping are ",a ,"and ",b)
+
+Q2) WAP TO CALCULATE
+
+1.) AREA OF TRIANGLE USING HERON'S FORMULA
+
+import math
+a = int(input("length of 1st side:"))
+b = int(input("length of 2nd side:")) 
+c = int(input("length of 3rd side:"))
+s = (a+b+c)/2
+area = math.sqrt(s*(s-a)*(s-b)*(s-c))
+print(f"area of triangle is: {area} sq. units")
+
+2.) AREA OF CIRCLE
+
+import math
+r = int(input("enter radius:"))
+area = math.pi * r **2
+print(f"area of triangle is: {area} sq. units")
+
+3.) SIMPLE INTEREST
+
+P = int(input("enter principal value: "))
+t = int(input("enter time: "))
+r = int(input("enter rate: "))
+SI = (P*t*r)/100
+print(f"simple interest is {SI}")
+
+Q3) WAP TO FIND QUOTIENT AND REMAINDER
+
+a = int(input("enter a number: "))
+b = int(input("enter a number: "))
+print("quotient is: ", a/b)
+print("remainder is: ", a%b)
+
+Q4) WAP TO CONVERT CELCIUS INTO FAHRENHIET
+
+a = int(input("enter temperature in celsius: "))
+f = (a * 9/5) + 32
+print(f"temperature in fahrenheit is {f}F")
+
+Q5) WAP TO FIND DISTANCE BETWEEN TWO POINTS
+
+import math
+print("enter co-ordinates of point A")
+x1 = int(input("enter x1 : "))
+y1 = int(input("enter y1 : "))
+print("enter co-ordinates of point B")
+x2 = int(input("enter x2 : "))
+y2 = int(input("enter y2 : "))
+d = math.sqrt((x2-x1)**2 + (y2-y1)**2)
+print("distance between two points is : ",d)
+
+                                                                                     ASSINGMENT - 2
+
+Q1) WAP TO FIND LARGEST NUMBER OUT OF THREE NUMBER
+
+print("enter three numbers :")
+a = int(input("enter first number :"))
+b = int(input("enter seconf number :"))
+c = int(input("enter third number :"))
+d = max(a,b,c)
+print("the maximum number is :",d)
+
+Q2) WAP TO CHECK ELIGIBILITY FOR VOTING
+
+a = int(input("enter your age: "))
+if a >= 18:
+    print("you are eligible for voting")
+else:
+    print("you are not eligible for voting")
+
+Q3) WAP TO DETERMINE GRADE OF STUDENT
+
+a = int(input("enter your percentage :"))
+if a > 90:
+    print("you are grade A student")
+elif a<=90 and a>80:
+    print("you are grade B student")
+elif a<=80 and a>70:
+    print("you are grade C student")
+else:
+    print("you need improvement")
+
+Q4) WAP TO CHECK LEAP YEAR
+ 
+a = int(input("enter year: "))
+if a%400==0 or (a%4==0 and a%100!=0):
+    print("leap year")
+else:
+    print("not leap year")
+
+Q5) WAP TO PRINT NUMBER BETWEEN 10-30 THAT ARE DIVISIBLE BY 2,3 BOTH
+
+ for i in range(11,30):
+    if i%2==0 and i%3==0:
+        print(i)
+
+Q6) WAP TO CHECK PALLINDROME
+
+a = int(input("enter a number to check if it is pallindrome or not: "))
+b = a
+c = 0
+while a>0:
+    d = a%10
+    c = c*10+d
+    a = a//10
+if c == b:
+    print(f"{b} is a pallindrome")
+else:
+    print(f"{b} is not a pallindrome")
+
+Q7) WAP TO CALCULATE SUM OF SQUARE OF FIRST N NATURAL NUMBER
+
+a = int(input("enter a number till where you want sum of square :"))
+sum = 0
+for i in range(a+1):
+    sum += (i*i)
+print(sum)
+
+Q8) WAP TO PRINT KEYS AND VALUES OF A DICTIONARY USING LOOP
+
+thisdict={ 
+  "a" : 1,
+  "b" : 'hello',
+  "c" : [2,5.5]
+}
+for i,j in thisdict.items():
+    print("key:",i)
+    print("value:",j)
+
+Q9) WAP TO COUNT TOTAL NUMBER OF VOWELS IN A STRING
+
+a = str(input("enter your text : "))
+count = 0
+for i in range(len(a)):
+    if a[i] == "a" or a[i] == "e" or a[i] == "i" or a[i] == "o" or a[i] == "u" or a[i] == "A" or a[i] == "E" or a[i] == "i" or a[i] == "O" or a[i] == "U":
+        count += 1
+print(count)
+
+Q10) WAP TO PRINT
+A
+BBB
+CCCCC
+
+a =chr(64)
+for i in range(1,6,2):
+    a = chr(ord(a)+1)
+    for j in range(i):
+        print(a,end="")
+    print()
+
+
