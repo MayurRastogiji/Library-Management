@@ -172,3 +172,122 @@ for i in range(1,6,2):
     print()
 
 
+                                                                                  Assingment - 3
+
+
+Q1) WAP to reversed every element of the string
+
+n =  str(input("Enter a string:\n"))
+n = n.split()
+i = [j[::-1] for j in n]
+m = " ".join(i)
+print(m)
+
+Q2) WAP to capitalised first and last alphabet of every element in string
+
+n =  str(input("Enter a string:\n"))
+n = n.split()
+i = [i[0].capitalize() + i[1:-1] + i[-1].capitalize() for i in n]
+m = " ".join(i)
+print(m)
+
+Q3) WAP to check if first letter of each word is capital or not in a given string
+
+n =  str(input("Enter a string:\n"))
+n = n.split()
+a = 0
+for i in n:
+    if i[0].isupper():
+        a += 1
+if a == len(n):
+    print(True)
+else:
+    print(False)
+
+Q4) WAP to print a star pattern
+
+n = int(input("Enter a number \n"))
+for i in range(n+1):
+    for j in range(n+1-i):
+        print(" ",end="")
+    print("*"*i)
+
+Q5) WAP to swap case of each letter in a string
+
+n = str(input("Enter a string\n"))
+a = [i.swapcase() for i in n]
+m = "".join(a)
+print(m)
+
+Q6) WAP to remove all dublicates from string
+
+n = str(input("Enter a string\n"))
+a = ""
+for i in n:
+    if i not in a:
+        a += i
+print(a)
+
+Q7) WAP to count even and odd number in a list
+
+a = input("Enter numbers separated by spaces:\n")
+n = list(map(int, a.split()))
+even = 0
+odd = 0
+for i in n:
+    if i%2==0:
+        even += 1
+    else:
+        odd += 1
+print(f"total even are {even} and odd are {odd}")
+
+Q8) WAP to make a list of sum of numbers of digit in a list
+
+a = input("Enter numbers separated by spaces:\n")
+n = list(map(int, a.split()))
+result = []
+for i in n:
+    sum = 0
+    for j in str(i):
+        sum += int(j)
+    result.append(sum)
+print(result)
+
+Q9) WAP to distinct words from a tupple
+
+a = input("Enter numbers separated by spaces:\n")
+n = tuple(map(str, a.split()))
+result = []
+for i in n:
+    if i not in result:
+        result.append(i)
+result = tuple(result)
+print(result)
+
+Q10) WAP to create a list of tuple having a number(from given list) and its cube in a tuple
+
+a = input("Enter numbers separated by spaces:\n")
+n = list(map(int, a.split()))
+result = []
+for i in n:
+    t = []
+    t.append(i)
+    c = i ** 3
+    t.append(c)
+    t = tuple(t)
+    result.append(t)
+print(result)
+
+Q11) WAP to make a dictionary in which keys are numbers from 1 to 15 and there values are there square
+
+a = []
+b = []
+for i in range(1,16):
+    a.append(i)
+for i in a:
+    j = i*i
+    b.append(j)
+result = {i:j for i,j in zip(a,b)}
+print(result)
+
+Q12) WAP
