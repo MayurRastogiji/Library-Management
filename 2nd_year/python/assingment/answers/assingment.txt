@@ -290,4 +290,96 @@ for i in a:
 result = {i:j for i,j in zip(a,b)}
 print(result)
 
-Q12) WAP
+Q12) WAP to make a dictionary form a string as a key and there count as a value
+
+s = str(input("Enter your string:\n"))
+l =[]
+c =[]
+for i in s:
+    if i not in l: 
+        l.append(i)
+        c.append(s.count(i))
+dict = dict(zip(l,c))
+print(dict)
+
+Q13)WAP to count number of words, letters and line in a text file
+
+with open('./testing/file_A.txt','r') as f:
+    content = f.read()
+lines = content.splitlines()
+words = content.split()
+letter = 0
+for i in words:
+    letter += len(i)  
+print(f"numhber of words are {len(words)} \nnumber of lines are {len(lines)} \nnumber of letters are {letter}")
+
+Q14) WAP to copy content of a file into another
+
+with open('./testing/file_A.txt','r') as f:
+    content = f.read()
+with open('./testing/file_B.txt','w') as w:
+    w.write(content)
+
+Q15) WAP to print only those words in a file which contain al least two vowels 
+
+s = str(input("Enter your string to be printed in a file \n"))
+vowels= 'aeiouAEIOU'
+with open('./testing/file_B.txt','a') as f:
+    for i in s.split():
+        count = 0
+        for j in i:
+            if j in vowels:
+                count += 1
+        if count >= 2:
+            f.write(f'{i} ') 
+                                   								    25 QUESTIONS
+
+Q1) WAP to make a half kaju kalti form *
+
+a = int(input("Enter a number\n"))
+for i in range(1,a+1):
+    for j in range(i):
+        print("*", end="")
+    print()
+for i in range(a-1,0,-1):
+    for j in range(i):
+        print("*", end="")
+    print()
+
+Q2) WAP to count total letters, uppercase, lowercase letter in a given string
+
+s = str(input('Enter a string\n'))
+upper, lower, count = 0,0,0
+for i in s.split():
+    for j in i:
+        count += 1
+        if j.isupper():
+            upper += 1
+        if j.islower():
+            lower += 1
+print(f"Total number of letters are {count} \nuppercase letters are {upper} \nlowercase letter are {lower}.")
+
+Q3) WAP to write fibonnaci series
+
+n = int(input("Enter a number\n"))
+a = -1
+b = 1
+for i in range(n+1):
+    c = a+b
+    a = b
+    b = c
+    print(c,end=" ")
+
+Q4) WAP to read content of a file and create twon more file named even and odd and separate content of file 1 into those two based on there name
+
+with open('input.txt','w') as i:
+    i.write('1 52 5 2 6354 6 198 3 246 523 24 98 6 546 54 6 4 65 4 69 469 84 984 965 45 1 65 1 68 4 5644 644 65 4 694 48 698 4 69586958 49' )
+with open('input.txt','r') as i:
+    content = i.read()
+    for i in content.split():
+        if int(i)%2 == 0:
+            with open('./testing/file_A.txt','a') as e:
+                e.write(f"{i} ")
+        else:
+            with open('./testing/file_B.txt','a') as o:
+                o.write(f"{i} ")
