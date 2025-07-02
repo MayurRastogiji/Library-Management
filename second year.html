@@ -3,9 +3,145 @@
 <head>
     <title>second year</title>
     <link rel="stylesheet" href="style.css">
+    <!-- <style>
+        :root {
+                        --bg-light: radial-gradient(#f0f4fd, #a8caf9);
+                        --bg-dark: radial-gradient(#1a1a1a, #333333);
+                        --text-light: #000000;
+                        --text-dark: #ffffff;
+                        --btn-bg: #ffffff;
+                        --btn-text: #000000;
+                }
+
+                body {
+                        margin: 0;
+                        padding: 0;
+                        height: 100%;
+                        font-family: Arial, sans-serif;
+                        background: var(--bg-light);
+                        color: var(--text-light);
+                        scroll-behavior: smooth;
+                        transition: background 0.3s, color 0.3s;
+                }
+
+                .dark-mode {
+                        background: var(--bg-dark);
+                        color: var(--text-dark);
+                }
+
+                .navbar {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        background-color: rgba(255, 255, 255, 0.7);
+                        padding: 10px 20px;
+                        flex-wrap: wrap;
+                }
+
+                .logo {
+                        height: 40px;
+                }
+
+                .navbar ul {
+                        list-style: none;
+                        display: flex;
+                        gap: 15px;
+                        padding: 0;
+                }
+
+                .navbar ul li a {
+                        text-decoration: none;
+                        color: inherit;
+                        font-weight: bold;
+                }
+
+                button {
+                        margin: 5px;
+                        padding: 10px 20px;
+                        background-color: var(--btn-bg);
+                        color: var(--btn-text);
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        transition: transform 0.2s, background-color 0.3s;
+                }
+
+                button:hover {
+                        transform: scale(1.05);
+                        background-color: #d6e0f0;
+                }
+
+                .back {
+                        padding: 20px;
+                        max-width: 1000px;
+                        margin: auto;
+                }
+
+                summary {
+                        font-size: 22px;
+                        font-weight: bold;
+                        margin-top: 20px;
+                }
+
+                .name {
+                        font-size: 18px;
+                        color: #333;
+                        margin-top: 15px;
+                }
+
+                .dark-mode button {
+                        background-color: #444;
+                        color: #fff;
+                }
+
+                .dark-mode .navbar {
+                        background-color: rgba(0, 0, 0, 0.5);
+                }
+
+                .toggle-switch {
+                        margin-left: auto;
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                }
+
+                .toggle-switch label {
+                        font-weight: bold;
+                }
+
+                @media (max-width: 768px) {
+                        .navbar ul {
+                                flex-direction: column;
+                                align-items: flex-start;
+                        }
+
+                        .navbar {
+                                flex-direction: column;
+                                align-items: flex-start;
+                        }
+
+                        button {
+                                width: 100%;
+                        }
+                }
+    </style> -->
 </head>
 
 <body>
+    <!-- <nav>
+        <div class="navbar">
+                <a href="index.html"><img src="1st_year/MIET_Logo.png" class="logo"></a>
+                <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+                <div class="toggle-switch">
+                        <label for="modeSwitch">Dark Mode</label>
+                        <input type="checkbox" id="modeSwitch">
+                </div>
+        </div>
+    </nav> -->
     <div class="banner1">
         <div class="navbar">
             <a href="index.html"><img src="1st_year/MIET_Logo.png" class="logo"></a>
@@ -15,6 +151,10 @@
                 <li><a href="about.html">about us</a></li>
                 <li><a href="contactus.html">contact us</a></li>
             </ul>
+            <!-- <div class="toggle-switch">
+                        <label for="modeSwitch">Dark Mode</label>
+                        <input type="checkbox" id="modeSwitch">
+            </div> -->
         </div>
         <div class="content">
             <a href="2notes.html"><button type="button"><span></span>notes</button></a>
@@ -28,6 +168,12 @@
             <a href="2assingment.html"><button type="button"><span></span>ASSINGMENT</button></a>
         </div>
     </div>
+    <!-- <script>
+                const toggle = document.getElementById("modeSwitch");
+                toggle.addEventListener("change", () => {
+                        document.body.classList.toggle("dark-mode", toggle.checked);
+                });
+    </script> -->
 </body>
 
 </html>

@@ -2,24 +2,187 @@
 
 <head>
     <title>HAND WRITTEN NOTES</title>
-    <link rel="stylesheet" href="style.css">
-    <nav>
-        <div class="navbar">
-            <a href="index.html"><img src="1st_year/MIET_Logo.png" class="logo"></a>
-            <ul>
-                <li><a href="index.html">home</a></li>
-                <li><a href="about.html">about us</a></li>
-                <li><a href="contactus.html">contact us</a></li>
-            </ul>
-        </div>
-    </nav>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <!-- CSS -->
     <style>
-        button{
-            color: black;
+        :root {
+            --bg-light: radial-gradient(circle at top left, #e3f2fd, #c9e4ff);
+            --bg-dark: radial-gradient(circle at top left, #1a1a1a, #333);
+            --text-light: #000000;
+            --text-dark: #ffffff;
+            --btn-bg-light: #ffffff;
+            --btn-text-light: #000000;
+            --btn-bg-dark: #444;
+            --btn-text-dark: #ffffff;
+            --name-light: #2c3e50;
+            --name-dark: #e0e0e0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: var(--bg-light);
+            color: var(--text-light);
+            scroll-behavior: smooth;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .dark-mode {
+            background: var(--bg-dark);
+            color: var(--text-dark);
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgba(255, 255, 255, 0.6);
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            transition: background-color 0.3s;
+        }
+
+        .dark-mode .navbar {
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .navbar .logo {
+            height: 40px;
+        }
+
+        .nav-center {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            flex-grow: 1;
+        }
+
+        .nav-center a {
+            text-decoration: none;
+            color: inherit;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .toggle-switch {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toggle-switch label {
+            font-weight: bold;
+        }
+
+        /* Content */
+        .back {
+            padding: 30px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin: 60px 0;
+        }
+
+        summary {
+            font-size: 22px;
+            font-weight: bold;
+            margin: 40px 0 20px 0;
+        }
+
+        .name {
+            font-size: 18px;
+            color: var(--name-light);
+            margin: 10px 0;
+        }
+
+        .dark-mode .name {
+            color: var(--name-dark);
+        }
+
+        button {
+            margin: 10px 5px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        body:not(.dark-mode) button {
+            background-color: var(--btn-bg-light);
+            color: var(--btn-text-light);
+        }
+
+        .dark-mode button {
+            background-color: var(--btn-bg-dark);
+            color: var(--btn-text-dark);
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-center {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .toggle-switch {
+                align-self: flex-end;
+                margin-top: 10px;
+            }
+
+            h1 {
+                font-size: 28px;
+                margin: 40px 0;
+            }
+
+            button {
+                width: 100%;
+            }
         }
     </style>
+
 </head>
+
 <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <!-- Left: Logo -->
+        <a href="index.html">
+            <img src="1st_year/MIET_Logo.png" alt="Logo" class="logo" />
+        </a>
+
+        <!-- Center: Links -->
+        <div class="nav-center">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contactus.html">Contact Us</a>
+        </div>
+
+        <!-- Right: Toggle -->
+        <div class="toggle-switch">
+            <label for="modeSwitch">Dark Mode</label>
+            <input type="checkbox" id="modeSwitch" />
+        </div>
+    </nav>
     <div id="pyqs" class="back">
         <h1>COA</h1>
         <div>
@@ -38,11 +201,11 @@
             <summary class="name">Sessional Paper</summary>
             <div>
                 <a href="2nd_year/COA/SESSIONAL PAPERS/Sessional 1.pdf"><button type="button"><span></span>2022-23 <br>
-                    1</button></a>
-            <a href="2nd_year/COA/SESSIONAL PAPERS/Sessional 2 .pdf"><button type="button"><span></span>2022-23 <br>
-                    2</button></a>
+                        1</button></a>
+                <a href="2nd_year/COA/SESSIONAL PAPERS/Sessional 2 .pdf"><button type="button"><span></span>2022-23 <br>
+                        2</button></a>
             </div>
-            
+
             <h1>DS</h1>
             <summary class="name">PYQs</summary>
             <div>
@@ -58,11 +221,11 @@
             <summary class="name">Sessional Paper</summary>
             <div>
                 <a href="2nd_year/DS/sessional paper/Sessional 1.pdf"><button type="button"><span></span>sessional
-                    1</button></a>
-            <a href="2nd_year/DS/sessional paper/Sessional 2.pdf"><button type="button"><span></span>sessional
-                    2</button></a>
-            <a href="2nd_year/DS/sessional paper/Sessional 3.pdf"><button type="button"><span></span>sessional
-                    3</button></a>
+                        1</button></a>
+                <a href="2nd_year/DS/sessional paper/Sessional 2.pdf"><button type="button"><span></span>sessional
+                        2</button></a>
+                <a href="2nd_year/DS/sessional paper/Sessional 3.pdf"><button type="button"><span></span>sessional
+                        3</button></a>
             </div>
             <h1>DSTL</h1>
             <summary class="name">PYQs</summary>
@@ -89,56 +252,75 @@
             <div>
                 <a href="2nd_year/MATHS/PUT/MATHS .pdf"><button type="button"><span></span>2022-23</button></a>
                 <a href="2nd_year/MATHS/PUT/PUT(23-24).jpg"><button type="button"><span></span>2023-24(1)</button></a>
-                <a href="2nd_year/MATHS/PUT/PUT(23-24)(2).jpg"><button type="button"><span></span>2023-24(2)</button></a>
+                <a href="2nd_year/MATHS/PUT/PUT(23-24)(2).jpg"><button
+                        type="button"><span></span>2023-24(2)</button></a>
             </div>
             <summary class="name">Sessional Paper</summary>
             <div>
                 <a href="2nd_year/DSTL/sessional paper/Sessional 1 .pdf"><button type="button"><span></span>sessional
-                    1</button></a>
-            <a href="2nd_year/DSTL/sessional paper/Sessional 2 .pdf"><button type="button"><span></span>sessional
-                    2</button></a>
+                        1</button></a>
+                <a href="2nd_year/DSTL/sessional paper/Sessional 2 .pdf"><button type="button"><span></span>sessional
+                        2</button></a>
             </div>
-            
+
             <h1>sensor and instrumentation</h1>
             <summary class="name">PYQs</summary>
             <div>
-                <a href="2nd_year/sensor and instrumentation/sessional paper/KOE034 19-20.pdf"><button type="button"><span></span>2019-2020</button></a>
-                <a href="2nd_year/sensor and instrumentation/sessional paper/KOE034 20-21.pdf"><button type="button"><span></span>2020-21</button></a>
-                <a href="2nd_year/sensor and instrumentation/sessional paper/KOE034 21-22.pdf"><button type="button"><span></span>2021-22</button></a>
-                <a href="2nd_year/sensor and instrumentation/sessional paper/SENSOR-AND-INSTRUMENTATION-KOE-034 (1).pdf"><button type="button"><span></span>questions</button></a>
+                <a href="2nd_year/sensor and instrumentation/sessional paper/KOE034 19-20.pdf"><button
+                        type="button"><span></span>2019-2020</button></a>
+                <a href="2nd_year/sensor and instrumentation/sessional paper/KOE034 20-21.pdf"><button
+                        type="button"><span></span>2020-21</button></a>
+                <a href="2nd_year/sensor and instrumentation/sessional paper/KOE034 21-22.pdf"><button
+                        type="button"><span></span>2021-22</button></a>
+                <a
+                    href="2nd_year/sensor and instrumentation/sessional paper/SENSOR-AND-INSTRUMENTATION-KOE-034 (1).pdf"><button
+                        type="button"><span></span>questions</button></a>
             </div>
             <summary class="name">PUT</summary>
             <div>
-                <a href="2nd_year/sensor and instrumentation/sessional paper/PUT 22-23.jpg"><button type="button"><span></span>2022-23</button></a>
-                <a href="2nd_year/sensor and instrumentation/sessional paper/PUT 23-24.jpg"><button type="button"><span></span>2020-21</button></a>
+                <a href="2nd_year/sensor and instrumentation/sessional paper/PUT 22-23.jpg"><button
+                        type="button"><span></span>2022-23</button></a>
+                <a href="2nd_year/sensor and instrumentation/sessional paper/PUT 23-24.jpg"><button
+                        type="button"><span></span>2020-21</button></a>
             </div>
             <summary class="name">Sessional Paper</summary>
             <div>
-                <a href="2nd_year/sensor and instrumentation/sessional paper/sessional 1.jpg"><button type="button"><span></span>sessional 1</button></a>
-                <a href="2nd_year/sensor and instrumentation/sessional paper/sessional 2.jpg"><button type="button"><span></span>sessional 2</button></a>
+                <a href="2nd_year/sensor and instrumentation/sessional paper/sessional 1.jpg"><button
+                        type="button"><span></span>sessional 1</button></a>
+                <a href="2nd_year/sensor and instrumentation/sessional paper/sessional 2.jpg"><button
+                        type="button"><span></span>sessional 2</button></a>
             </div>
             <h1>Technical Communication</h1>
-            <summary class="name">sessional</summary>   
+            <summary class="name">sessional</summary>
             <div>
-                <a href="2nd_year/technical communication/sessional paper/2023-24.jpg"><button type="button"><span></span>sessional 1</button></a>
-                <a href="2nd_year/technical communication/sessional paper/sessional 1.jpg"><button type="button"><span></span>sessional 2</button></a>
+                <a href="2nd_year/technical communication/sessional paper/2023-24.jpg"><button
+                        type="button"><span></span>sessional 1</button></a>
+                <a href="2nd_year/technical communication/sessional paper/sessional 1.jpg"><button
+                        type="button"><span></span>sessional 2</button></a>
             </div>
             <summary class="name">PUT</summary>
             <div>
-                <a href="2nd_year/technical communication/sessional paper/put 2023-24.jpg"><button type="button"><span></span>2023-24</button></a>
-                <a href="2nd_year/technical communication/important questions/Tech Comm 25 Imp Ques.pdf"><button type="button"><span></span>imp questions</button></a>
+                <a href="2nd_year/technical communication/sessional paper/put 2023-24.jpg"><button
+                        type="button"><span></span>2023-24</button></a>
+                <a href="2nd_year/technical communication/important questions/Tech Comm 25 Imp Ques.pdf"><button
+                        type="button"><span></span>imp questions</button></a>
             </div>
             <h1>python</h1>
             <summary class="name">sessional</summary>
             <div>
-                <a href="2nd_year/python/question paper/2023-24.jpg"><button type="button"><span></span>sessional 1</button></a>
-                <a href="2nd_year/python/question paper/sessional 2 23-24 1st part.jpg"><button type="button"><span></span>sessional 2 1st part</button></a>
-                <a href="2nd_year/python/question paper/sessional 2 23-24 2nd part.jpg"><button type="button"><span></span>sessional 2 2nd part</button></a>
+                <a href="2nd_year/python/question paper/2023-24.jpg"><button type="button"><span></span>sessional
+                        1</button></a>
+                <a href="2nd_year/python/question paper/sessional 2 23-24 1st part.jpg"><button
+                        type="button"><span></span>sessional 2 1st part</button></a>
+                <a href="2nd_year/python/question paper/sessional 2 23-24 2nd part.jpg"><button
+                        type="button"><span></span>sessional 2 2nd part</button></a>
             </div>
             <summary class="name">PUT</summary>
             <div>
-                <a href="2nd_year/python/question paper/put 2023-24.jpg"><button type="button"><span></span>PUT 1st part</button></a>
-                <a href="2nd_year/python/question paper/put 2nd part 2023-24.jpg"><button type="button"><span></span>PUT 2nd part </button></a>
+                <a href="2nd_year/python/question paper/put 2023-24.jpg"><button type="button"><span></span>PUT 1st
+                        part</button></a>
+                <a href="2nd_year/python/question paper/put 2nd part 2023-24.jpg"><button type="button"><span></span>PUT
+                        2nd part </button></a>
             </div>
             <h1>CSS</h1>
             <div>
@@ -155,22 +337,33 @@
             <h1>Automata</h1>
             <summary class="name">PUT</summary>
             <div>
-                <a href="2nd_year/python/question paper/put 2023-24.jpg"><button type="button"><span></span>PUT(22-23)</button></a>
+                <a href="2nd_year/python/question paper/put 2023-24.jpg"><button
+                        type="button"><span></span>PUT(22-23)</button></a>
             </div>
             <h1>OOPS</h1>
             <summary class="name">Sessional</summary>
             <div>
-                <a href="2nd_year/OOPS/sessional/sessional(23-24).jpg"><button type="button"><span></span>Sessional 1</button></a>
-                <a href="2nd_year/OOPS/sessional/sessional_2(23-24).jpg"><button type="button"><span></span>Sessional 2</button></a>
+                <a href="2nd_year/OOPS/sessional/sessional(23-24).jpg"><button type="button"><span></span>Sessional
+                        1</button></a>
+                <a href="2nd_year/OOPS/sessional/sessional_2(23-24).jpg"><button type="button"><span></span>Sessional
+                        2</button></a>
             </div>
             <h1>OS</h1>
             <summary class="name">PUT</summary>
             <div>
                 <a href="2nd_year/OS/PUT/PUT(22-23).pdf"><button type="button"><span></span>PUT(22-23)</button></a>
-                <a href="2nd_year/OS/PUT/PUT(23-24)(1).jpg"><button type="button"><span></span>PUT(22-23)(1)</button></a>
-                <a href="2nd_year/OS/PUT/PUT(23-24)(2).jpg"><button type="button"><span></span>PUT(22-23)(2)</button></a>
+                <a href="2nd_year/OS/PUT/PUT(23-24)(1).jpg"><button
+                        type="button"><span></span>PUT(22-23)(1)</button></a>
+                <a href="2nd_year/OS/PUT/PUT(23-24)(2).jpg"><button
+                        type="button"><span></span>PUT(22-23)(2)</button></a>
             </div>
         </div>
+        <script>
+            const toggle = document.getElementById("modeSwitch");
+            toggle.addEventListener("change", () => {
+                document.body.classList.toggle("dark-mode", toggle.checked);
+            });
+        </script>
 </body>
 
 </html>
