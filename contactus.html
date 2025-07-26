@@ -1,80 +1,365 @@
 <html>
 
 <head>
-    <title>HAND WRITTEN NOTES</title>
-    <link rel="stylesheet" href="style.css">
-    <nav>
-        <div class="navbar">
-            <a href="index.html"><img src="1st_year/MIET_Logo.png" class="logo"></a>
-            <ul>
-                <li><a href="index.html">home</a></li>
-                <li><a href="about.html">about us</a></li>
-                <li><a href="contactus.html">contact us</a></li>
-            </ul>
-        </div>
-    </nav>
-    <style>
-        h2 {
-            text-align: center;
-            font-size: 50px;
-            color: black;
-            padding: 100px;
-            padding-bottom: 80px;
-        }
+  <title>HAND WRITTEN NOTES</title>
+  <link rel="stylesheet" href="style.css">
+  <nav>
+    <div class="navbar">
+      <a href="index.html"><img src="1st_year/MIET_Logo.png" class="logo"></a>
+      <ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="about.html">about us</a></li>
+        <li><a href="contactus.html">contact us</a></li>
+      </ul>
+    </div>
+  </nav>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(#f0f4fd, #a8caf9);
+      min-height: 100vh;
+    }
 
-        #contact {
+    .contact-container {
+      padding-top: 120px;
+      padding-bottom: 50px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
 
-            justify-content: center;
-            text-align: center;
-            font-size: 20px;
-            color: black;
-            padding: 20px;
-            height: 100%;
-        }
+    .contact-header {
+      text-align: center;
+      margin-bottom: 50px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 60px 20px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
 
-        #contact img {
-            width: 80px;
-            height: auto;
-        }
-        #contact img:hover{
-            transform: scale(1.5);
-            transition-duration: 2s;
-        }
+    .contact-header h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
 
-        .id {
-            padding: 20px;
-            padding-bottom: 50px;
-        }
+    .contact-header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
 
-        a {
-            padding: 20px;
-        }
-    </style>
+    .developer-section {
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      margin-bottom: 40px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      border-left: 5px solid #667eea;
+    }
+
+    .developer-content {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .developer-avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      color: white;
+      font-weight: bold;
+    }
+
+    .developer-info h2 {
+      color: #667eea;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .developer-info .title {
+      color: #666;
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    .developer-info p {
+      color: #333;
+      line-height: 1.7;
+      font-size: 1.1rem;
+    }
+
+    .social-section {
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      margin-bottom: 30px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .social-section h2 {
+      color: #667eea;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      text-align: center;
+      border-bottom: 2px solid #667eea;
+      padding-bottom: 15px;
+    }
+
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .social-card {
+      background: linear-gradient(145deg, #ffffff, #f0f0f0);
+      padding: 25px;
+      border-radius: 12px;
+      text-align: center;
+      transition: all 0.3s ease;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .social-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .social-icon {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 15px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .social-icon:hover {
+      transform: scale(1.1);
+    }
+
+    .social-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .social-card h3 {
+      color: #333;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .social-card p {
+      color: #666;
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+
+    .social-link {
+      display: inline-block;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .social-link:hover {
+      background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+      transform: translateY(-2px);
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      color: white;
+      padding: 40px;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .cta-section p {
+      font-size: 1.1rem;
+      margin-bottom: 25px;
+      opacity: 0.9;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .cta-button {
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      padding: 15px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .cta-button:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: translateY(-2px);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .contact-header h1 {
+        font-size: 2rem;
+      }
+
+      .contact-header p {
+        font-size: 1rem;
+      }
+
+      .developer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .developer-avatar {
+        margin: 0 auto;
+      }
+
+      .developer-info h2 {
+        font-size: 2rem;
+      }
+
+      .social-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .contact-container {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <div class="back">
-        <div id="contact">
-            <h2>CONTACT US</H2>
-            <p>
-            <h4>MAYUR RASTOGI</h4>
-            <p1> I'm pursuing 2nd year of my BTech CSE(AI-ML) from MIET,Meerut . <br> if you Confront with any kind of
-                malfuncting , you are free to contact us via
-                links given below <br>just remember to follow me on instagram and subscribe mine youtube channel for
-                staying updated about important information.</p1> <br>
-            <div class="id">
-                <!-- <a href="https://instagram.com/mayur_rastogi01?utm_source=qr&igshid=MzNlNGNkZWQ4Mg=="><img
-                        src="contact/insta.png"></a> -->
-                <a href="https://www.linkedin.com/in/MayurRastogi/"> <img src="contact/linkedin.jpg"></a>
-                <!-- <a href="https://youtube.com/@MAYURRASTOGI01?si=xS8yR7xPhMyJwZUj"><img
-                        src="contact/youtube-logo-11609383902z56yosfap9.png"></a> -->
-                <!-- <a href="https://www.facebook.com/profile.php?id=100074411439188&mibextid=avESrC"><img
-                        src="contact/face.png"></a> -->
-                <a href="mailto:mayurrastogiji@gmail.com"><img src="contact/gmail-logo-png-UbCiBR.png"></a>
-                <a href="https://github.com/MayurRastogiji"><img src="contact/GitHub_Invertocat_Logo.svg" ></a>
-            </div>
+  <div class="back">
+    <div class="contact-container">
+      <!-- Header Section -->
+      <div class="contact-header">
+        <h1>Get In Touch</h1>
+        <p>Have questions, suggestions, or feedback? I'd love to hear from you. Let's connect and make Library Hub even
+          better together.</p>
+      </div>
+
+      <!-- Developer Information Section -->
+      <div class="developer-section">
+        <div class="developer-content">
+          <div class="developer-avatar">
+            <img src="contact/mayur.jpg" alt="Mayur Rastogi" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+          </div>
+          <div class="developer-info">
+            <a href="https://mayurrastogiji.github.io/portfolio/" style="text-decoration: none;" target="_blank">
+              <h2>Mayur Rastogi</h2>
+            </a>
+            <div class="title">BTech CSE (AI-ML) Student & Developer</div>
+            <p>I'm currently pursuing my Final year of BTech in Computer Science & Engineering with specialization in
+              AI-ML from MIET, Meerut. I'm passionate about creating solutions that make education more accessible and
+              helping fellow students succeed in their academic journey.</p>
+
+            <p>If you encounter any malfunctioning or have suggestions for improvement, feel free to contact me through
+              the social media links below. Don't forget to follow me on Instagram and subscribe to my YouTube channel
+              to stay updated with important information and new features!</p>
+          </div>
         </div>
+      </div>
+
+
+      <!-- Social Media Section -->
+      <div class="social-section">
+        <h2>Connect With Me</h2>
+        <div class="social-grid">
+          <div class="social-card">
+            <div class="social-icon">
+              <img src="contact/linkedin.jpg" alt="LinkedIn">
+            </div>
+            <h3>LinkedIn</h3>
+            <p>Connect with me professionally and view my career journey</p>
+            <a href="https://www.linkedin.com/in/MayurRastogi/" class="social-link" target="_blank">Connect</a>
+          </div>
+
+          <div class="social-card">
+            <div class="social-icon">
+              <img src="contact/gmail-logo-png-UbCiBR.png" alt="Gmail">
+            </div>
+            <h3>Email</h3>
+            <p>Send me a direct message for any queries or collaboration</p>
+            <a href="mailto:mayurrastogiji@gmail.com" class="social-link">Send Email</a>
+          </div>
+
+          <div class="social-card">
+            <div class="social-icon">
+              <img src="contact/GitHub_Invertocat_Logo.svg" alt="GitHub">
+            </div>
+            <h3>GitHub</h3>
+            <p>Explore my code repositories and contribute to projects</p>
+            <a href="https://github.com/MayurRastogiji" class="social-link" target="_blank">View Code</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Call to Action Section -->
+      <div class="cta-section">
+        <h2>Let's Build Something Amazing Together</h2>
+        <p>Whether you're a fellow student, educator, or tech enthusiast, I'm always excited to connect and collaborate.
+          Your feedback helps make Library Hub better for everyone!</p>
+
+        <div class="cta-buttons">
+          <a href="mailto:mayurrastogiji@gmail.com" class="cta-button">📧 Send Message</a>
+          <a href="https://github.com/MayurRastogiji" class="cta-button" target="_blank">🚀 View Projects</a>
+        </div>
+
+        <p style="margin-top: 30px; font-size: 1rem; opacity: 0.8;">
+          <strong>💡 Quick Tip:</strong> Follow my social media for regular updates about new features, study materials,
+          and important announcements related to Library Hub.
+        </p>
+      </div>
     </div>
+  </div>
 </body>
 
 </html>
