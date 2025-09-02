@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8" />
+        <title>HAND WRITTEN NOTES</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- CSS -->
+        <style>
+                :root {
+                        --bg-light: radial-gradient(circle at top left, #e3f2fd, #c9e4ff);
+                        --bg-dark: radial-gradient(circle at top left, #1a1a1a, #333);
+                        --text-light: #000000;
+                        --text-dark: #ffffff;
+                        --btn-bg-light: #ffffff;
+                        --btn-text-light: #000000;
+                        --btn-bg-dark: #444;
+                        --btn-text-dark: #ffffff;
+                        --name-light: #2c3e50;
+                        --name-dark: #e0e0e0;
+                }
+
+                body {
+                        margin: 0;
+                        padding: 0;
+                        font-family: Arial, sans-serif;
+                        background: var(--bg-light);
+                        color: var(--text-light);
+                        scroll-behavior: smooth;
+                        transition: background 0.3s, color 0.3s;
+                }
+
+                .dark-mode {
+                        background: var(--bg-dark);
+                        color: var(--text-dark);
+                }
+
+                /* Navbar */
+                .navbar {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        background-color: rgba(255, 255, 255, 0.6);
+                        padding: 10px 20px;
+                        position: sticky;
+                        top: 0;
+                        z-index: 1000;
+                        backdrop-filter: blur(10px);
+                        transition: background-color 0.3s;
+                }
+
+                .dark-mode .navbar {
+                        background-color: rgba(0, 0, 0, 0.6);
+                }
+
+                .navbar .logo {
+                        height: 40px;
+                }
+
+                .nav-center {
+                        display: flex;
+                        gap: 25px;
+                        justify-content: center;
+                        flex-grow: 1;
+                }
+
+                .nav-center a {
+                        text-decoration: none;
+                        color: inherit;
+                        font-weight: bold;
+                        font-size: 16px;
+                }
+
+                .toggle-switch {
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                }
+
+                .toggle-switch label {
+                        font-weight: bold;
+                }
+
+                /* Content */
+                .back {
+                        padding: 30px;
+                        max-width: 1000px;
+                        margin: auto;
+                }
+
+                h1 {
+                        text-align: center;
+                        font-size: 36px;
+                        margin: 60px 0;
+                }
+
+                summary {
+                        font-size: 22px;
+                        font-weight: bold;
+                        margin: 40px 0 20px 0;
+                }
+
+                .name {
+                        font-size: 18px;
+                        color: var(--name-light);
+                        margin: 10px 0;
+                }
+
+                .dark-mode .name {
+                        color: var(--name-dark);
+                }
+
+                button {
+                        margin: 10px 5px;
+                        padding: 10px 20px;
+                        border: none;
+                        border-radius: 6px;
+                        cursor: pointer;
+                        transition: background 0.3s, transform 0.2s;
+                }
+
+                body:not(.dark-mode) button {
+                        background-color: var(--btn-bg-light);
+                        color: var(--btn-text-light);
+                }
+
+                .dark-mode button {
+                        background-color: var(--btn-bg-dark);
+                        color: var(--btn-text-dark);
+                }
+
+                button:hover {
+                        transform: scale(1.05);
+                }
+
+                @media (max-width: 768px) {
+                        .navbar {
+                                flex-direction: column;
+                                align-items: flex-start;
+                        }
+
+                        .nav-center {
+                                flex-direction: column;
+                                align-items: center;
+                                width: 100%;
+                                margin: 10px 0;
+                        }
+
+                        .toggle-switch {
+                                align-self: flex-end;
+                                margin-top: 10px;
+                        }
+
+                        h1 {
+                                font-size: 28px;
+                                margin: 40px 0;
+                        }
+
+                        button {
+                                width: 100%;
+                        }
+                }
+        </style>
+</head>
+
+<body>
+        <!-- Navbar -->
+        <nav class="navbar">
+                <!-- Left: Logo -->
+                <a href="index.html">
+                        <img src="1st_year/MIET_Logo.png" alt="Logo" class="logo" />
+                </a>
+
+                <!-- Center: Links -->
+                <div class="nav-center">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About Us</a>
+                        <a href="contactus.html">Contact Us</a>
+                </div>
+
+                <!-- Right: Toggle -->
+                <div class="toggle-switch">
+                        <label for="modeSwitch">Dark Mode</label>
+                        <input type="checkbox" id="modeSwitch" />
+                </div>
+        </nav>
+        <div id="notes" class="back">
+                <h1>NOTES</h1>
+                <summary>Computer Networks</summary>
+                <div>
+                        <summary class="name">College Notes</summary>
+                        <div>
+                                <a href="3rd_year/1.Computers_Networks/Clg_notes/CN_unit_1.pdf"><button
+                                                type="button"><span></span>unit 1 (handwritten)</button></a>
+                                <a
+                                        href="3rd_year/1.Computers_Networks/Clg_notes/computer-network-bcs603-Unit_1_notes.pdf"><button
+                                                type="button"><span></span>Unit-1 (printed)</button></a>
+                                <a href="3rd_year/1.Computers_Networks/Clg_notes/computer-network-unit-2-notes.pdf"><button
+                                                type="button"><span></span>unit 2</button></a>
+                                <a href="3rd_year/1.Computers_Networks/Clg_notes/unit_3.pdf"><button
+                                                type="button"><span></span>unit 3</button></a>
+                                <a href="3rd_year/1.Computers_Networks/Clg_notes/unit_4.pdf"><button
+                                                type="button"><span></span>unit 4</button></a>
+                                <a href="3rd_year/1.Computers_Networks/Clg_notes/unit_5.pdf"><button
+                                                type="button"><span></span>unit 5</button></a>
+                                <a href="3rd_year/Quatum/Computer_Networks_Quantum_2024-25.pdf"><button
+                                                type="button"><span></span>Quantum</button></a>
+                        </div>
+                        <summary class="name">Edushine Notes</summary>
+                        <div>
+                                <a
+                                        href="3rd_year/1.Computers_Networks/Notes_edushine/Computer_Network_Unit_1_(Easy_Notes_)_Edushine_Classes__250505_102713.pdf"><button
+                                                type="button"><span></span>unit 1</button></a>
+                                <a
+                                        href="3rd_year/1.Computers_Networks/Notes_edushine/Computer_Network_Unit_2_(Easy_Notes_)_Edushine_Classes_250505_102737.pdf"><button
+                                                type="button"><span></span>unit 2</button></a>
+                                <a
+                                        href="3rd_year/1.Computers_Networks/Notes_edushine/Computer_Network_Unit_3_(Easy_Notes_)_Edushine_Classes_250505_102751.pdf"><button
+                                                type="button"><span></span>unit 3</button></a>
+                                <a
+                                        href="3rd_year/1.Computers_Networks/Notes_edushine/Computer_Network_Unit_4_(Easy_Notes_)_Edushine_Classes_250505_102815.pdf"><button
+                                                type="button"><span></span>unit 4</button></a>
+                                <a
+                                        href="3rd_year/1.Computers_Networks/Notes_edushine/Computer_Network_Unit_5_(Easy_Notes_)_Edushine_Classes_250505_102828.pdf"><button
+                                                type="button"><span></span>unit 5</button></a>
+                        </div>
+                        <summary class="name">Multiatoms Notes</summary>
+                        <div>
+                                <a
+                                        href="3rd_year/1.Computers_Networks/Notes_multiatoms/Computer_Network_Unit_1_multi_atom__250207_175420.pdf"><button
+                                                type="button"><span></span>unit 1</button></a>
+                                <a
+                                        href="3rd_year/1.Computers_Networks/Notes_multiatoms/Computer_Network_Unit_2_250207_175542.pdf"><button
+                                                type="button"><span></span>unit 2</button></a>
+                                <a
+                                        href="3rd_year/1.Computers_Networks/Notes_multiatoms/Unit_3_CN_Multiatom_250207_175554.pdf"><button
+                                                type="button"><span></span>unit 3</button></a>
+                                <a href="3rd_year/1.Computers_Networks/Notes_multiatoms/CN_Unit_4_250207_175605.pdf"><button
+                                                type="button"><span></span>unit 4</button></a>
+                                <a href="3rd_year/1.Computers_Networks/Notes_multiatoms/CN_Unit_5__250207_175617.pdf"><button
+                                                type="button"><span></span>unit 5</button></a>
+                        </div>
+                        <summary class="name">Assignment</summary>
+                        <div>
+                                <a href="3rd_year/1.Computers_Networks/Assignment/CN__Assignment_-_1.pdf"><button
+                                                type="button"><span></span>unit 1</button></a>
+                                <a href="3rd_year/1.Computers_Networks/Assignment/C_N_Assignment_-_2.pdf"><button
+                                                type="button"><span></span>unit 2</button></a>
+                                <a href="3rd_year/1.Computers_Networks/Assignment/CN__Assignment_-_3.pdf"><button
+                                                type="button"><span></span>unit 3</button></a>
+                                <a href="3rd_year/1.Computers_Networks/Assignment/CN__Assignment_-_4.pdf"><button
+                                                type="button"><span></span>unit 4</button></a>
+                                <a href="3rd_year/1.Computers_Networks/Assignment/CN__Assignment_-_5.pdf"><button
+                                                type="button"><span></span>unit 5</button></a>
+                        </div>
+                        <summary class="name">Questions paper</summary>
+                        <div>
+                                <a href="3rd_year/PYQ_Paper/2021-22/btech-cs-6-sem-computer-networks-kcs603-2022.pdf"><button
+                                                type="button"><span></span>2021-2022</button></a>
+                                <a href="3rd_year/PYQ_Paper/2022-23/btech-cs-6-sem-computer-networks-kcs-603-2023.pdf"><button
+                                                type="button"><span></span>2022-2023</button></a>
+                                <a href="3rd_year/PYQ_Paper/2023-24/KCS603-COMPUTER-NETWORKS.pdf"><button
+                                                type="button"><span></span>2023-2024</button></a>
+                        </div>
+                </div>
+
+                <summary>Data Analytics</summary>
+                <div>
+                        <summary class="name">College notes</summary>
+                        <div>
+                                <a href="3rd_year/2.Data_Analytics/Clg_notes/Unit1.pdf"><button
+                                                type="button"><span></span>unit 1</button></a>
+                                <a href="3rd_year/2.Data_Analytics/Clg_notes/Unit2.pdf"><button
+                                                type="button"><span></span>Unit 2</button></a>
+                                <a href="3rd_year/2.Data_Analytics/Clg_notes/Unit_3/3rd_Unit_Numerical.pdf"><button
+                                                type="button"><span></span>unit 3 (Numbericals)</button></a>
+                                <a href="3rd_year/2.Data_Analytics/Clg_notes/Unit_3/Estimating_moment.pdf"><button
+                                                type="button"><span></span>unit 3 (Estimating moment)</button></a>
+                                <a
+                                        href="3rd_year/2.Data_Analytics/Clg_notes/Unit_3/Mining&Data_Stream_Unit-3_removed.pdf"><button
+                                                type="button"><span></span>unit 3 (Mining & data stream)</button></a>
+                                <a href="3rd_year/2.Data_Analytics/Clg_notes/Unit_3/Unit-3.pdf"><button
+                                                type="button"><span></span>unit 3</button></a>
+                                <a href="3rd_year/2.Data_Analytics/Clg_notes/Unit4.pdf"><button
+                                                type="button"><span></span>unit 4</button></a>
+                                <a href="3rd_year/2.Data_Analytics/Clg_notes/Unit5.pdf"><button
+                                                type="button"><span></span>unit 5</button></a>
+                                <a href="3rd_year/Quatum/DA.pdf"><button type="button"><span></span>Quantum</button></a>
+                        </div>
+                        <summary class="name">Studco notes</summary>
+                        <div>
+                                <a href="3rd_year/2.Data_Analytics/NOTES/DA1.pdf"><button
+                                                type="button"><span></span>unit 1</button></a>
+                                <a href="3rd_year/2.Data_Analytics/NOTES/DA2.pdf"><button
+                                                type="button"><span></span>Unit 2</button></a>
+                                <a href="3rd_year/2.Data_Analytics/NOTES/DA3.pdf"><button
+                                                type="button"><span></span>unit 3</button></a>
+                                <a href="3rd_year/2.Data_Analytics/NOTES/DA4.pdf"><button
+                                                type="button"><span></span>unit 4</button></a>
+                                <a href="3rd_year/2.Data_Analytics/NOTES/DA5.pdf"><button
+                                                type="button"><span></span>unit 5</button></a>
+                        </div>
+                        <summary class="name">Assignment</summary>
+                        <div>
+                                <a href="3rd_year/2.Data_Analytics/Assignment/DA_Assignment-1.docx_(1).docx"><button
+                                                type="button"><span></span>unit 1</button></a>
+                                <a href="3rd_year/2.Data_Analytics/Assignment/DA-Assignment_2nd.docx"><button
+                                                type="button"><span></span>Unit 2</button></a>
+                                <a href="3rd_year/2.Data_Analytics/Assignment/DA_Assignment-3.docx_(2).pdf"><button
+                                                type="button"><span></span>unit 3</button></a>
+                                <a href="3rd_year/2.Data_Analytics/Assignment/DA_Assignment-4.docx_(1)_(1).pdf"><button
+                                                type="button"><span></span>unit 4</button></a>
+                        </div>
+
+                        <summary class="name">Questions paper</summary>
+                        <div>
+                                <a href="3rd_year/PYQ_Paper/2021-22/DATA-ANALYTICS-KIT601_250207_191455.pdf"><button
+                                                type="button"><span></span>2021-2022</button></a>
+                        </div>
+                </div>
+
+
+                <summary>Software Engineering</summary>
+                <div>
+                        <summary class="name">College Notes</summary>
+                        <div>
+                                <a href="3rd_year/3.Software_Eng/Clg_notes/Unit1.pdf"><button
+                                                type="button"><span></span>unit
+                                                1</button></a>
+                                <a href="3rd_year/3.Software_Eng/Clg_notes/Unit2.pdf"><button
+                                                type="button"><span></span>unit
+                                                2</button></a>
+                                <a href="3rd_year/3.Software_Eng/Clg_notes/Unit3.pdf"><button
+                                                type="button"><span></span>unit
+                                                3</button></a>
+                                <a href="3rd_year/3.Software_Eng/Clg_notes/Unit4.pdf"><button
+                                                type="button"><span></span>unit
+                                                4</button></a>
+                                <a href="3rd_year/3.Software_Eng/Clg_notes/Unit5.pdf"><button
+                                                type="button"><span></span>unit
+                                                5</button></a>
+                                <a href="3rd_year/Quatum/Software_Engineer_Quantum_2024-25.pdf"><button
+                                                type="button"><span></span>Quantum</button></a>
+                        </div>
+                        <summary class="name">Edushine Notes</summary>
+                        <div>
+                                <a href="3rd_year/3.Software_Eng/Notes_edushine/Edushine_se_unit-1_250505_102530.pdf"><button
+                                                type="button"><span></span>unit 1</button></a>
+                                <a href="3rd_year/3.Software_Eng/Notes_edushine/Edushine_se_u-2_250505_102621.pdf"><button
+                                                type="button"><span></span>unit 2</button></a>
+                                <a href="3rd_year/3.Software_Eng/Notes_edushine/Edushine_se_unit_-3_250505_102636.pdf"><button
+                                                type="button"><span></span>unit 3</button></a>
+                                <a href="3rd_year/3.Software_Eng/Notes_edushine/Edushine_se_unit-4_250505_102646.pdf"><button
+                                                type="button"><span></span>unit 4</button></a>
+                                <a href="3rd_year/3.Software_Eng/Notes_edushine/Edushine_se_u-5_250505_102658.pdf"><button
+                                                type="button"><span></span>unit 5</button></a>
+                        </div>
+                        <summary class="name">Multiatoms Notes</summary>
+                        <div>
+                                <a href="3rd_year/3.Software_Eng/Notes__multi_atom/SE_UNIT-1_MULTI_ATOMS.pdf"><button
+                                                type="button"><span></span>unit 1</button></a>
+                                <a href="3rd_year/3.Software_Eng/Notes__multi_atom/SE_UNIT-2__MULTI_ATOMS.pdf"><button
+                                                type="button"><span></span>unit 2</button></a>
+                                <a href="3rd_year/3.Software_Eng/Notes__multi_atom/SE_UNIT-3_MULTI_ATOMS.pdf"><button
+                                                type="button"><span></span>unit 3</button></a>
+                                <a href="3rd_year/3.Software_Eng/Notes__multi_atom/SE_UNIT-4_MULTI_ATOMS.pdf"><button
+                                                type="button"><span></span>unit 4</button></a>
+                                <a href="3rd_year/3.Software_Eng/Notes__multi_atom/SE_UNIT-5_MULTI_ATOMS_.pdf"><button
+                                                type="button"><span></span>unit 5</button></a>
+                        </div>
+                        <summary class="name">Assignment</summary>
+                        <div>
+                                <a href="3rd_year/3.Software_Eng/Assignment/Assignment_1_Soft._Engg.docx.pdf"><button
+                                                type="button"><span></span>unit 1</button></a>
+                                <a href="3rd_year/3.Software_Eng/Assignment/Software_Engineering_BCS601_Assignment-2.pdf"><button
+                                                type="button"><span></span>unit 2</button></a>
+                                <a href="3rd_year/3.Software_Eng/Assignment/Unit-3_software_design_assignment.pdf"><button
+                                                type="button"><span></span>unit 3</button></a>
+                                <a href="3rd_year/3.Software_Eng/Assignment/Software_testing_Assignment-4.pdf"><button
+                                                type="button"><span></span>unit 4</button></a>
+                        </div>
+                        <summary class="name">Questions paper</summary>
+                        <div>
+                                <a href="3rd_year/PYQ_Paper/2021-22/INDIAN-TRADITION-CULTURE-SOCIETY-KNC602_250207_191735.pdf"><button
+                                                type="button"><span></span>2021-2022</button></a>
+                                <a
+                                        href="3rd_year/PYQ_Paper/2022-23/btech-cs-6-sem-software-engineering-kcs-601-2023.pdf"><button
+                                                type="button"><span></span>2022-2023</button></a>
+                                <a href="3rd_year/PYQ_Paper/2023-24/KCS601-SOFTWARE-ENGINEERING.pdf"><button
+                                                type="button"><span></span>2023-2024</button></a>
+                        </div>
+                </div>
+
+                <summary>Machine Learning Technique</summary>
+                <div>
+                        <summary class="name">printed Notes</summary>
+                        <div>
+                                <a href="3rd_year/4.Machine_learning_tecq/Clg_notes/UNIT-1_MLT_BCDS062_2024-25.pdf"><button
+                                                type="button"><span></span>unit 1</button></a>
+                                <a href="3rd_year/4.Machine_learning_tecq/Clg_notes/k-NN_numerical_n_theory.pdf"><button
+                                                type="button"><span></span>KNN</button></a>
+                                <a href="3rd_year/4.Machine_learning_tecq/Clg_notes/ID3_Algorithm.pdf"><button
+                                                type="button"><span></span>ID3</button></a>
+                                <a href="3rd_year/4.Machine_learning_tecq/Clg_notes/Unit-3_MLT.pdf"><button
+                                                type="button"><span></span>unit 3</button></a>
+                                <a href="3rd_year/4.Machine_learning_tecq/Clg_notes/Unit-4_MLT.pdf"><button
+                                                type="button"><span></span>unit 4</button></a>
+                                <a href="3rd_year/4.Machine_learning_tecq/Clg_notes/Genetic_Algo_Unit_5.pdf"><button
+                                                type="button"><span></span>Genetic algo</button></a>
+                                <a
+                                        href="3rd_year/4.Machine_learning_tecq/Clg_notes/Detailed_Notes_Genetic_Algo_(Unit_5).pdf"><button
+                                                type="button"><span></span>unit 5</button></a>
+                                <a
+                                        href="3rd_year/4.Machine_learning_tecq/Clg_notes/Detailed_notes_Machine_Learning_Techniques.pdf"><button
+                                                type="button"><span></span>Full MLT</button></a>
+                                <a href="3rd_year/4.Machine_learning_tecq/Clg_notes/MLT_by_engineering_express.pdf"><button
+                                                type="button"><span></span>MLT by Engineering Express</button></a>
+                        </div>
+                        <summary class="name">handwritten Notes</summary>
+                        <div>
+                                <a href="3rd_year/4.Machine_learning_tecq/NOTES/Unit_1_ML.pdf"><button
+                                                type="button"><span></span>unit 1</button></a>
+                                <a href="3rd_year/4.Machine_learning_tecq/NOTES/Unit_2_ML_.pdf"><button
+                                                type="button"><span></span>unit 2</button></a>
+                                <a href="3rd_year/4.Machine_learning_tecq/NOTES/Unit_3_ML_.pdf"><button
+                                                type="button"><span></span>unit 3</button></a>
+                                <a href="3rd_year/4.Machine_learning_tecq/NOTES/Unit_4_ML.pdf"><button
+                                                type="button"><span></span>unit 4</button></a>
+                                <a href="3rd_year/4.Machine_learning_tecq/NOTES/Unit_5_(GA_&_RNN).pdf"><button
+                                                type="button"><span></span>unit 5</button></a>
+                        </div>
+                        <summary class="name">PPT Notes</summary>
+                        <div>
+                                <a href="3rd_year/4.Machine_learning_tecq/PPT_NOTES/Unit_1.pptx"><button
+                                                type="button"><span></span>unit 1</button></a>
+                                <a href="3rd_year/4.Machine_learning_tecq/PPT_NOTES/Unit_2.pptx"><button
+                                                type="button"><span></span>unit 2</button></a>
+                                <a href="3rd_year/4.Machine_learning_tecq/PPT_NOTES/Unit_3.pptx"><button
+                                                type="button"><span></span>unit 3</button></a>
+                                <a href="3rd_year/4.Machine_learning_tecq/PPT_NOTES/Unit_4.pptx"><button
+                                                type="button"><span></span>unit 4</button></a>
+                                <a href="3rd_year/4.Machine_learning_tecq/PPT_NOTES/Unit_5.pptx"><button
+                                                type="button"><span></span>unit 5</button></a>
+                        </div>
+                        <summary class="name">Quantum</summary>
+                        <div>
+                                <a href="3rd_year/Quatum/MLT.pdf"><button
+                                                type="button"><span></span>2024-2025</button></a>
+                        </div>
+
+                        <summary class="name">Questions paper</summary>
+                        <div>
+                                <a href="3rd_year/PYQ_Paper/2023-24/KAI601-MACHINE-LEARNING-TECHNIQUES.pdf"><button
+                                                type="button"><span></span>2023-2024</button></a>
+                        </div>
+                </div>
+                <summary>Idea of Business Models</summary>
+                <div>
+                        <summary class="name">College Notes</summary>
+                        <div>
+                                <a href="3rd_year/5.Idea_of_Business_Models/Notes/UNIT_1_NOTES_(BOE060).pdf"><button
+                                                type="button"><span></span>unit 1</button></a>
+                                <a href="3rd_year/5.Idea_of_Business_Models/Notes/UNIT_-_II_NOTES.pdf"><button
+                                                type="button"><span></span>unit 2</button></a>
+                                <a href="3rd_year/5.Idea_of_Business_Models/Notes/UNIT_-_III_NOTES.pdf"><button
+                                                type="button"><span></span>unit 3</button></a>
+                                <a href="3rd_year/5.Idea_of_Business_Models/Notes/UNIT_-_IV_NOTES.pdf"><button
+                                                type="button"><span></span>unit 4</button></a>
+                                <a href="3rd_year/5.Idea_of_Business_Models/Notes/UNIT-V_NOTES.pdf"><button
+                                                type="button"><span></span>unit 5</button></a>
+                                <a href="3rd_year/Quatum/Idea_to_busines_model.pdf"><button
+                                                type="button"><span></span>Quantum</button></a>
+                        </div>
+                        <summary class="name">Assignment</summary>
+                        <div>
+                                <a href="3rd_year/5.Idea_of_Business_Models/Assignment/Assignment_1.docx"><button
+                                                type="button"><span></span>unit 1</button></a>
+                                <a href="3rd_year/5.Idea_of_Business_Models/Assignment/Assignment_2.docx"><button
+                                                type="button"><span></span>unit 2</button></a>
+                                <a href="3rd_year/5.Idea_of_Business_Models/Assignment/Assignment_3.docx"><button
+                                                type="button"><span></span>unit 3</button></a>
+                                <a href="3rd_year/5.Idea_of_Business_Models/Assignment/Assignment_4.docx"><button
+                                                type="button"><span></span>unit 4</button></a>
+                                <a href="3rd_year/5.Idea_of_Business_Models/Assignment/Assignment_5.docx"><button
+                                                type="button"><span></span>unit 5</button></a>
+                        </div>
+                        <summary class="name">Questions paper</summary>
+                        <div>
+                                <a
+                                        href="3rd_year/PYQ_Paper/2021-22/btech-oe-6-sem-idea-to-business-model-koe060-2022.pdf"><button
+                                                type="button"><span></span>2021-2022</button></a>
+                                <a href="3rd_year/PYQ_Paper/2023-24/KOE060-IDEA-TO-BUSINESS-MODEL.pdf"><button
+                                                type="button"><span></span>2023-2024</button></a>
+                        </div>
+                </div>
+                <summary>Indian Traditional Culture Society</summary>
+                <div>
+                        <summary class="name">College Notes</summary>
+                        <div>
+                                <a
+                                        href="3rd_year/6.Indian_traditional_culture_society/Clg_notes/CO_-1,_EITK_(BNC-602).pdf"><button
+                                                type="button"><span></span>unit 1</button></a>
+                                <a
+                                        href="3rd_year/6.Indian_traditional_culture_society/Clg_notes/CO_-_2,_EITK_(BNC-602).pdf"><button
+                                                type="button"><span></span>unit 2</button></a>
+                                <a
+                                        href="3rd_year/6.Indian_traditional_culture_society/Clg_notes/CO_3_250524_104918.pdf"><button
+                                                type="button"><span></span>unit 3</button></a>
+                                <a href="3rd_year/6.Indian_traditional_culture_society/Clg_notes/CO_4.pdf"><button
+                                                type="button"><span></span>unit 4</button></a>
+                                <a
+                                        href="3rd_year/6.Indian_traditional_culture_society/Clg_notes/CO_-5,_EITK_(BNC-602).pdf"><button
+                                                type="button"><span></span>unit 5</button></a>
+                                <a href="3rd_year/6.Indian_traditional_culture_society/Complete_ITCS_Notes.pdf"><button
+                                                type="button"><span></span>Complete ITCS Notes(printed)</button></a>
+                                <a href="3rd_year/6.Indian_traditional_culture_society/ITCS_Short_Questions.docx"><button
+                                                type="button"><span></span>Short Questions</button></a>
+                                <a
+                                        href="3rd_year/6.Indian_traditional_culture_society/ITCS_NOTES_[UNIT-1,2,3,4,5]_SEB_(2).pdf"><button
+                                                type="button"><span></span>Complete ITCS Notes(Hand
+                                                Written)</button></a>
+                                <a href="3rd_year/Quatum/Essence_of_Indian_Traditional_2024-25_Quantum.pdf"><button
+                                                type="button"><span></span>Quantum</button></a>
+                        </div>
+                        <summary class="name">Assignment</summary>
+                        <div>
+                                <a
+                                        href="3rd_year/6.Indian_traditional_culture_society/Assignment/Assignment_1_(BNC-602).docx"><button
+                                                type="button"><span></span>unit 1</button></a>
+                                <a
+                                        href="3rd_year/6.Indian_traditional_culture_society/Assignment/Assignment_2_(BNC-602).docx"><button
+                                                type="button"><span></span>unit 2</button></a>
+                        </div>
+                        <summary class="name">Questions paper</summary>
+                        <div>
+                                <a
+                                        href="3rd_year/PYQ_Paper/2021-22/INDIAN-TRADITION-CULTURE-SOCIETY-KNC602_250207_191557.pdf"><button
+                                                type="button"><span></span>2021-2022</button></a>
+                                <a href="3rd_year/PYQ_Paper/2023-24/KNC602-INDIAN-TRADITION-CULTURE-AND-SOCIETY.pdf"><button
+                                                type="button"><span></span>2023-2024</button></a>
+                        </div>
+                </div>
+                <summary>Artificial Intelligence</summary>
+                <div>
+                        <summary class="name">College Notes</summary>
+                        <div>
+                                <a href="3rd_year/AI/notes/Artificial_Intelligence_Unit_1_Notes.pdf"><button
+                                                type="button"><span></span>unit 1</button></a>
+                                <a href="3rd_year/AI/notes/Unit_2_notes_Artificial_Intelligence.pdf"><button
+                                                type="button"><span></span>unit 2</button></a>
+                                <a href="3rd_year/AI/notes/unit-3_Artificial_intelligence_notes.pdf"><button
+                                                type="button"><span></span>unit 3</button></a>
+                                <a href="3rd_year/AI/notes/unit_4_AI_Notes.pdf"><button type="button"><span></span>unit
+                                                4</button></a>
+                                <a href="3rd_year/AI/notes/unit_5_artificial_intelligence_notes.pdf"><button
+                                                type="button"><span></span>unit 5</button></a>
+                                <a href="3rd_year/AI/AI_-_25.pdf"><button type="button"><span></span>imp 25
+                                                Questions</button></a>
+                                <a href="3rd_year/AI/Artificial_Intelligence_quantum.pdf"><button
+                                                type="button"><span></span>Quantum</button></a>
+                        </div>
+                </div>
+                <summary>Application of Software Computing</summary>
+                <div>
+                        <summary class="name">College Notes</summary>
+                        <div>
+                                <a href="3rd_year/ASC/Notes/Dtailed_notes_Unit_1_ASC.pdf"><button
+                                                type="button"><span></span>unit 1</button></a>
+                                <a href="3rd_year/ASC/Notes/Unit-2_Presentation_ASC.pdf"><button
+                                                type="button"><span></span>unit
+                                                2</button></a>
+                                <a href="3rd_year/ASC/Notes/Unit-3_Application_of_Soft_Computing.pdf"><button
+                                                type="button"><span></span>unit 3</button></a>
+                                <a href="3rd_year/ASC/Notes/Unit-4_Application_of_Soft_Computing.pdf"><button
+                                                type="button"><span></span>unit 4</button></a>
+                                <a href="3rd_year/ASC/Notes/Unit_5_Detailed_Notes.pdf"><button
+                                                type="button"><span></span>unit
+                                                5</button></a>
+                                <a href="3rd_year/Quatum/SOFT_COMPUTING_NEW_QUANTUM_2024-25.pdf"><button
+                                                type="button"><span></span>Quantum</button></a>
+                        </div>
+                        <summary class="name">Multi Atoms</summary>
+                        <div>
+                                <a href="3rd_year/ASC/Multi_Atoms/ASC-Unit-1-by-MultiAtoms.pdf"><button
+                                                type="button"><span></span>unit 1</button></a>
+                                <a href="3rd_year/ASC/Multi_Atoms/ASC-Unit-3-by-Multiatoms.pdf"><button
+                                                type="button"><span></span>unit 3</button></a>
+                                <a href="3rd_year/ASC/Multi_Atoms/UNIT-4-ASC-By-Multiatoms.pdf"><button
+                                                type="button"><span></span>unit 4</button></a>
+                                <a href="3rd_year/ASC/Multi_Atoms/ASC-Unit-5-by-Multiatoms.pdf"><button
+                                                type="button"><span></span>unit 5</button></a>
+                        </div>
+                </div>
+                <summary>COI</summary>
+                <div>
+                        <summary class="name">College Notes</summary>
+                        <div>
+                                <a href="3rd_year/COI/Notes/COI_UNIT-1_.docx.pdf"><button
+                                                type="button"><span></span>unit
+                                                1</button></a>
+                                <a href="3rd_year/COI/Notes/Unit_No._2_-COI_Notes_(1).docx.pdf"><button
+                                                type="button"><span></span>unit 2</button></a>
+                                <a href="3rd_year/COI/Notes/election_comission.pdf"><button
+                                                type="button"><span></span>Election
+                                                Comission</button></a>
+                                <a href="3rd_year/COI/Notes/electoral_process.pdf"><button
+                                                type="button"><span></span>Electoral
+                                                Process</button></a>
+                                <a href="3rd_year/COI/Notes/Unit_4.pdf"><button type="button"><span></span>unit
+                                                4</button></a>
+                                <a href="3rd_year/COI/Notes/Unit_No._5_-_COI_Notes.docx.pdf"><button
+                                                type="button"><span></span>unit 5</button></a>
+                                <a href="3rd_year/Quatum/Constitution_Of_India_Quantum_Pdf_2024-2025_(1).pdf"><button
+                                                type="button"><span></span>Quantum</button></a>
+                        </div>
+                </div>
+                <summary>DAA</summary>
+                <div>
+                        <summary class="name">College Notes</summary>
+                        <div>
+                                <a href="3rd_year/DAA/Unit-1.pdf"><button type="button"><span></span>unit 1</button></a>
+                                <a href="3rd_year/DAA/Unit-2.pdf"><button type="button"><span></span>unit 2</button></a>
+                                <a href="3rd_year/DAA/Unit-3.pdf"><button type="button"><span></span>unit 3</button></a>
+                                <a href="3rd_year/DAA/DAA-unit4.pdf"><button type="button"><span></span>Unit
+                                                4</button></a>
+                                <a href="3rd_year/DAA/unit-5.pdf"><button type="button"><span></span>unit 5</button></a>
+                                <a href="3rd_year/DAA/DAA_Notes_Complete (1)_231126_102325.pdf"><button
+                                                type="button"><span></span>Complete</button></a>
+                                <!-- <a href="3rd_year/Quatum/Constitution Of India Quantum Pdf 2024-2025 (1).pdf"><button type="button"><span></span>Quantum</button></a> -->
+                        </div>
+                        <summary class="name">Questions paper</summary>
+                        <div>
+                                <a href="3rd_year/DAA/20.pdf"><button type="button"><span></span>2020</button></a>
+                                <a href="3rd_year/DAA/21.pdf"><button type="button"><span></span>2021</button></a>
+                                <a href="3rd_year/DAA/22.pdf"><button type="button"><span></span>2022</button></a>
+                                <a href="3rd_year/DAA/23.pdf"><button type="button"><span></span>2023</button></a>
+                        </div>
+                </div>
+                <summary>Data Base Management System</summary>
+                <div>
+                        <summary class="name">College Notes</summary>
+                        <div>
+                                <a href="3rd_year/DBMS/DBMS_UNIT_1_.pdf"><button type="button"><span></span>unit
+                                                1</button></a>
+                                <a href="3rd_year/DBMS/DBMS_UNIT_2_.pdf"><button type="button"><span></span>unit
+                                                2</button></a>
+                                <a href="3rd_year/DBMS/DBMS_UNIT_3_.pdf"><button type="button"><span></span>unit
+                                                3</button></a>
+                                <a href="3rd_year/DBMS/DBMS_UNIT_4_.pdf"><button type="button"><span></span>Unit
+                                                4</button></a>
+                                <a href="3rd_year/Quatum/DBMS.pdf"><button
+                                                type="button"><span></span>Quantum</button></a>
+                        </div>
+                        <summary class="name">Multi Atoms</summary>
+                        <div>
+                                <a href="3rd_year/DBMS/DBMS-Unit-3-Notes-By-MultiAtomsPlus_(1).pdf"><button
+                                                type="button"><span></span>unit 3</button></a>
+                                <a href="3rd_year/DBMS/DBMS-Unit-5-By-Multi-Atoms-Plus.pdf"><button
+                                                type="button"><span></span>unit 5</button></a>
+                        </div>
+                        <summary class="name">Questions paper</summary>
+                        <div>
+                                <a href="3rd_year//DBMS/2020-2021.pdf"><button
+                                                type="button"><span></span>2020-2021</button></a>
+                                <a href="3rd_year//DBMS/2021-2022.pdf"><button
+                                                type="button"><span></span>2021-2022</button></a>
+                                <a href="3rd_year//DBMS/2022-2023.pdf"><button
+                                                type="button"><span></span>2022-2023</button></a>
+                        </div>
+                </div>
+        </div>
+        <script>
+                const toggle = document.getElementById("modeSwitch");
+                toggle.addEventListener("change", () => {
+                        document.body.classList.toggle("dark-mode", toggle.checked);
+                });
+        </script>
+</body>
+
+</html>
